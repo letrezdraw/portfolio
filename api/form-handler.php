@@ -1,0 +1,3 @@
+<?php
+// Handle form submissions
+?>
