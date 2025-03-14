@@ -3,7 +3,11 @@
     height: 100vh;
     width: 100%;
     position: relative;
+    display: flexbox;
+    flex-direction: row;
     scroll-snap-align: center;
+    overflow: hidden;
+
 }
 
 /* === LEFT NAVBAR (FIXED INSIDE THIS SECTION ONLY) === */
@@ -17,18 +21,216 @@
     position: absolute;
     left: 0;
     top: 0;
-    border-right: 1px solid var(--border-c);
 }
 
 /* === MIDDLE SHOWCASE (SCROLLABLE) === */
 .showcase {
     width: 60%;
-    height: 100%;
+    height: 100vh;
     overflow-y: auto;
     padding: 20px;
     margin-left: 20%; /* Push after side-nav */
     margin-right: 20%; /* Push before about-me */
 }
+
+.ticon{
+    mix-blend-mode:lighten;
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+}
+
+.box{
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.322);
+    overflow: hidden;
+    backdrop-filter: blur(50px);
+    border: 1px solid var(--border-c);
+}
+
+.Mtop{
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.Mbg p{
+    position: absolute;
+    left: 0px;
+    font-size: xx-large;
+}
+
+.Mbg{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+}
+
+.linksT{
+    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 10px;
+}
+
+.linksT a{
+    border-radius: 3px;
+    border: 1px solid var(--border-c);
+    transition: all ease-in-out 0.2s;
+    &:hover{
+        box-shadow: 0 0 25px var(--shadow-low);
+        transform: scale(1.1);
+    }
+}
+
+.Mmid{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.Maddress{
+    opacity: 0.8;
+    padding-top: 5px;
+    height: 25px;
+    left: 10px;
+    font-size: 10px;
+    font-family: "Lexend Giga" ;
+    position: absolute;
+}
+.Mbottom{
+    padding-top: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: auto;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.icS img,.icG img{
+    filter: invert();
+    width: 20px;
+}
+
+.worklang,.softwares{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+.h1lg{
+    position: relative;
+    left: 30px;
+    top: -2px;
+    color: var(--shadow-low);
+}
+
+.marquee{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    -webkit-mask: linear-gradient(90deg,#0000,#000 20% 80%,#0000);
+}
+.softw {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,#0000,#000 20% 80%,#0000);
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-content {
+    border: 1px solid var(--border-c);
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    gap: 20px;
+    width: max-content;
+    animation: marqueeScroll 50s linear infinite;
+}
+.soft-content {
+    border: 1px solid var(--border-c);
+    display: flex;
+    gap: 20px;
+    height: 50px;
+    align-items: center;
+    width: max-content;
+    animation: marqueeScroll2 25s linear infinite;
+}
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-51%);
+    }
+}
+@keyframes marqueeScroll2 {
+    from {
+        transform: translateX(-51%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.marquee:hover .marquee-content ,.softw:hover .soft-content {
+    animation-play-state: paused;
+}
+
+.lab_lg{
+    margin: 5px;
+    font-size: 10px;
+}
+
+.icG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+}
+.icS{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.work{
+    position: relative;
+    display: flex;
+    height: 50px;
+}
+
+.pwork{
+    position: absolute;
+    bottom: 0;
+    font-size: large;
+}
+
+
+
+
 
 /* === RIGHT ABOUT ME (FIXED INSIDE THIS SECTION ONLY) === */
 .about-me {
@@ -40,7 +242,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    border-left: 1px solid var(--border-c);
 }
 
 .showcase::-webkit-scrollbar {
@@ -50,3 +251,4 @@
 .showcase::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
+

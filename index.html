@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="Logo-Trans.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Logo-Trans.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="Logo-Trans.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo-Trans.png">
+
+
     <title>L E T R E Z D R A W</title>
     <link rel='stylesheet' href='css/style.css'>
     <link rel="stylesheet" href="css/mouse.css">
@@ -8,12 +14,13 @@
     <link rel="stylesheet" href="css/mainsec.css">
     <link rel="stylesheet" href="css/hero.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <div class="cursor hidden">
+    <div class="cursor">
         <div class="cir"></div>
     </div>
-    <div class="bganibox hidden">
+    <div class="bganibox">
         <div class="b1"></div>
         <div class="b2"></div>
         <div class="b3"></div>
@@ -24,39 +31,222 @@
                 <img src="img/Logo-Trans.png" alt="Logo" class="Nlogo">
             </div>
             <div class="menu">
-                <a href="#home" class="js-trigger-transition">Home</a>
-                <a href="#project" class="js-trigger-transition">Projects</a>
-                <a href="#about" class="js-trigger-transition">About</a>
-                <a href="#contact" class="js-trigger-transition">Contact</a>
+                <a href="#containt" class="js-trigger-transition nav-link">Portfolio</a>
+                <a href="#About" class="js-trigger-transition nav-link">About</a>
             </div>
         </div>
     </section>
-    <section class="hero hidden nav-link" id="home">
-        <h1>Hellow</h1>
+        
+    <section class="hero nav-link" id="home">
+        <div class="parallax hidden">
+            <img src="img/Logo-Trans.png" alt="Hero Image" class="hero-image">
+        </div>
+        <div class="hero-content">
+            <p class="sdd">Scroll Down ↓</p>
+        </div>
     </section>
     
-    <section class="main-section hidden nav-link" id="project">
+    <section class="main-section hidden nav-link" id="containt">
         <!-- Left Navbar -->
-        <div class="side-nav">
-            <h2>Navbar</h2>
-            <p>Links here</p>
+        <div class="side-nav hidden">
+            <div class="side-nav-content hidden">
+                <a href="#Skills">Skills</a>
+            </div>
         </div>
 
         <!-- Middle Scrollable Showcase -->
-        <div class="showcase">
-            <h1>Showcase</h1>
-            <p>Scroll this section only...</p>
-            <p style="height: 1500px;">More content...</p>
+        <div class="showcase hidden">
+            <section class="me hidden">
+                <div class="box">
+                    <div class="Mtop">
+                        <div class="Mbg">
+                            <p>LETREZDRAW</p>
+                            <div class="linksT">
+                            <a href="mailto:letrezdraw@gmail.com" target="_blank"><img src="img/email.png" alt="letrezdraw@gmail.com" class="ticon"></a>
+                            <a href="https://github.com/letrezdraw" target="_blank"><img src="img/github.png" alt="https://github.com/letrezdraw" class="ticon"></a>
+                            <a href="https://www.artstation.com/letrezdraw" target="_blank"><img src="img/artstation.png" alt="https://www.artstation.com/letrezdraw" class="ticon"></a>
+                            <a href="https://www.instagram.com/letrezdraw/" target="_blank"><img src="img/instagram.png" alt="https://www.instagram.com/letrezdraw/" class="ticon"></a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="Mmid">
+                        <p class="Maddress"><span class="ic">⫰</span> India, Maharashtra</p>
+                    </div>
+                    <div class="Mbottom">
+                        I'm a 20-year-old web developer with 5+ years of experience creating professional, high-performance websites. I also have a passion for digital art and creative design.
+                    </div>
+                </div>
+            </section>
+            <section class="work hidden">
+                <p class="pwork">What i work with</p>
+            </section>
+            <section class="worklang hidden">
+                <div class="marquee">
+                    <p class="h1lg">Languages</p>
+                    <div class="marquee-content">
+                        <div class="i1 icG">
+                            <img src="img/1.png" alt="Image 1" class="imgG1">
+                            <p class="lab_lg">C</p>
+                        </div>
+                        <div class="i2 icG">
+                            <img src="img/2.png" alt="Image 2" class="imgG2">
+                            <p class="lab_lg">C++</p>
+                        </div>
+                        <div class="i3 icG">
+                            <img src="img/3.png" alt="Image 3" class="imgG3">
+                            <p class="lab_lg">C#</p>
+                        </div>
+                        <div class="i4 icG">
+                            <img src="img/4.png" alt="Image 4" class="imgG4">
+                            <p class="lab_lg">Html</p>
+                        </div>
+                        <div class="i5 icG">
+                            <img src="img/5.png" alt="Image 5" class="imgG5">
+                            <p class="lab_lg">Css</p>
+                        </div>
+                        <div class="i6 icG">
+                            <img src="img/6.png" alt="Image 6" class="imgG6">
+                            <p class="lab_lg">Java</p>
+                        </div>
+                        <div class="i7 icG">
+                            <img src="img/7.png" alt="Image 7" class="imgG7">
+                            <p class="lab_lg">JavaScript</p>
+                        </div>
+                        <div class="i8 icG">
+                            <img src="img/8.png" alt="Image 8" class="imgG8">
+                            <p class="lab_lg">Git</p>
+                        </div>
+                        <div class="i9 icG">
+                            <img src="img/9.png" alt="Image 9" class="imgG9">
+                            <p class="lab_lg">Python</p>
+                        </div>
+                        <div class="i10 icG">
+                            <img src="img/10.png" alt="Image 10" class="imgG10">
+                            <p class="lab_lg">PostgreSQL</p>
+                        </div>
+                        <div class="i1 icG">
+                            <img src="img/1.png" alt="Image 1" class="imgG1">
+                            <p class="lab_lg">C</p>
+                        </div>
+                        <div class="i2 icG">
+                            <img src="img/2.png" alt="Image 2" class="imgG2">
+                            <p class="lab_lg">C++</p>
+                        </div>
+                        <div class="i3 icG">
+                            <img src="img/3.png" alt="Image 3" class="imgG3">
+                            <p class="lab_lg">C#</p>
+                        </div>
+                        <div class="i4 icG">
+                            <img src="img/4.png" alt="Image 4" class="imgG4">
+                            <p class="lab_lg">Html</p>
+                        </div>
+                        <div class="i5 icG">
+                            <img src="img/5.png" alt="Image 5" class="imgG5">
+                            <p class="lab_lg">Css</p>
+                        </div>
+                        <div class="i6 icG">
+                            <img src="img/6.png" alt="Image 6" class="imgG6">
+                            <p class="lab_lg">Java</p>
+                        </div>
+                        <div class="i7 icG">
+                            <img src="img/7.png" alt="Image 7" class="imgG7">
+                            <p class="lab_lg">JavaScript</p>
+                        </div>
+                        <div class="i8 icG">
+                            <img src="img/8.png" alt="Image 8" class="imgG8">
+                            <p class="lab_lg">Git</p>
+                        </div>
+                        <div class="i9 icG">
+                            <img src="img/9.png" alt="Image 9" class="imgG9">
+                            <p class="lab_lg">Python</p>
+                        </div>
+                        <div class="i10 icG">
+                            <img src="img/10.png" alt="Image 10" class="imgG10">
+                            <p class="lab_lg">PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="softwares hidden">
+                <div class="softw">
+                    <p class="h1lg">Software</p>
+                    <div class="soft-content">
+                        <div class="i1 icS">
+                            <img src="img/s1.png" alt="Image 1" class="imgS">
+                            <p class="lab_lg">Blender</p>
+                        </div>
+                        <div class="i2 icS">
+                            <img src="img/s2.png" alt="Image 2" class="imgS">
+                            <p class="lab_lg">Photoshop</p>
+                        </div>
+                        <div class="i3 icS">
+                            <img src="img/s3.png" alt="Image 3" class="imgS">
+                            <p class="lab_lg">After Effect</p>
+                        </div>
+                        <div class="i4 icS">
+                            <img src="img/s4.png" alt="Image 4" class="imgS">
+                            <p class="lab_lg">Unity</p>
+                        </div>
+                        <div class="i5 icS">
+                            <img src="img/s5.png" alt="Image 5" class="imgS">
+                            <p class="lab_lg">DaVinci Resolve</p>
+                        </div>
+                        <div class="i6 icS">
+                            <img src="img/s6.png" alt="Image 6" class="imgS">
+                            <p class="lab_lg">VS Code</p>
+                        </div>
+                        <div class="i7 icS">
+                            <img src="img/s7.png" alt="Image 7" class="imgS">
+                            <p class="lab_lg">U E 5</p>
+                        </div>
+                        <div class="i8 icS">
+                            <img src="img/s8.png" alt="Image 8" class="imgS">
+                            <p class="lab_lg">FL Studio</p>
+                        </div>
+                        <div class="i1 icS">
+                            <img src="img/s1.png" alt="Image 1" class="imgS">
+                            <p class="lab_lg">Blender</p>
+                        </div>
+                        <div class="i2 icS">
+                            <img src="img/s2.png" alt="Image 2" class="imgS">
+                            <p class="lab_lg">Photoshop</p>
+                        </div>
+                        <div class="i3 icS">
+                            <img src="img/s3.png" alt="Image 3" class="imgS">
+                            <p class="lab_lg">After Effect</p>
+                        </div>
+                        <div class="i4 icS">
+                            <img src="img/s4.png" alt="Image 4" class="imgS">
+                            <p class="lab_lg">Unity</p>
+                        </div>
+                        <div class="i5 icS">
+                            <img src="img/s5.png" alt="Image 5" class="imgS">
+                            <p class="lab_lg">DaVinci Resolve</p>
+                        </div>
+                        <div class="i6 icS">
+                            <img src="img/s6.png" alt="Image 6" class="imgS">
+                            <p class="lab_lg">VS Code</p>
+                        </div>
+                        <div class="i7 icS">
+                            <img src="img/s7.png" alt="Image 7" class="imgS">
+                            <p class="lab_lg">U E 5</p>
+                        </div>
+                        <div class="i8 icS">
+                            <img src="img/s8.png" alt="Image 8" class="imgS">
+                            <p class="lab_lg">FL Studio</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- Right About Me Section -->
-        <div class="about-me">
-            <h2>About Me</h2>
+        <div class="about-me hidden">
+            <h2 class="hidden">About Me</h2>
         </div>
     </section>
-    <div class="warp-overlay"></div>
     <script type="module" src="js/mouse.js"></script>
     <script type="module" src="js/fadein.js"></script>
-    <script type="module" src="js/scrollsmooth.js"></script>
+    <script type="module" src="js/scrollbar.js"></script>
 </body>
 </html>
