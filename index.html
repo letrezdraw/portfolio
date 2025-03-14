@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>L E T R E Z D R A W</title>
     <link rel='stylesheet' href='css/style.css'>
+    <link rel="stylesheet" href="css/mouse.css">
+    <link rel="stylesheet" href="css/fadein.css">
+    <link rel="stylesheet" href="css/mainsec.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <h1>Welcome to MyWebsite</h1>
+    <div class="cursor hidden">
+        <div class="cir"></div>
+    </div>
+    <div class="bganibox hidden">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+    </div>
+    <section class="navbar hidden" >
+        <div class="bg">
+            <div class="logo_nav">
+                <img src="img/Logo-Trans.png" alt="Logo" class="Nlogo">
+            </div>
+            <div class="menu">
+                <a href="#home" class="js-trigger-transition">Home</a>
+                <a href="#project" class="js-trigger-transition">Projects</a>
+                <a href="#about" class="js-trigger-transition">About</a>
+                <a href="#contact" class="js-trigger-transition">Contact</a>
+            </div>
+        </div>
+    </section>
+    <section class="hero hidden nav-link" id="home">
+        <h1>Hellow</h1>
+    </section>
+    
+    <section class="main-section hidden nav-link" id="project">
+        <!-- Left Navbar -->
+        <div class="side-nav">
+            <h2>Navbar</h2>
+            <p>Links here</p>
+        </div>
+
+        <!-- Middle Scrollable Showcase -->
+        <div class="showcase">
+            <h1>Showcase</h1>
+            <p>Scroll this section only...</p>
+            <p style="height: 1500px;">More content...</p>
+        </div>
+
+        <!-- Right About Me Section -->
+        <div class="about-me">
+            <h2>About Me</h2>
+        </div>
+    </section>
+    <div class="warp-overlay"></div>
+    <script type="module" src="js/mouse.js"></script>
+    <script type="module" src="js/fadein.js"></script>
+    <script type="module" src="js/scrollsmooth.js"></script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+.main-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+/* === LEFT NAVBAR (FIXED INSIDE THIS SECTION ONLY) === */
+.side-nav {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 1px solid var(--border-c);
+}
+
+/* === MIDDLE SHOWCASE (SCROLLABLE) === */
+.showcase {
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    margin-left: 20%; /* Push after side-nav */
+    margin-right: 20%; /* Push before about-me */
+}
+
+/* === RIGHT ABOUT ME (FIXED INSIDE THIS SECTION ONLY) === */
+.about-me {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 1px solid var(--border-c);
+}
+
+.showcase::-webkit-scrollbar {
+    width: 5px;
+}
+
+.showcase::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
