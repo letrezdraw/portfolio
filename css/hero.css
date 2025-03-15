@@ -50,3 +50,30 @@
     position: absolute;
     transform: translateX(-100px);
 }
+
+
+
+@media (max-width: 768px) {
+    .HbgImg {
+    height: 100vh;
+    /* opacity: 0.3; */
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(-100px);
+    }
+    .parallax {
+        height: 100vh;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: -55;
+    }
+    
+    .hero-image{
+        position: relative;
+        top: 15%;
+        height: 60%;
+        mix-blend-mode:hue;
+    }
+}
