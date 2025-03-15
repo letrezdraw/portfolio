@@ -130,7 +130,7 @@
 }
 .h1lg{
     position: relative;
-    left: 10%;
+    left: 50px;
     top: -2px;
     color: var(--shadow-low);
 }
