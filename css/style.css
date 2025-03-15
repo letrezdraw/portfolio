@@ -198,6 +198,33 @@ a{
         opacity: 1;
     }
 }
-html {
-    scroll-behavior: smooth;
+.bottomBlur {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Total height: 50px full blur + 50px fade */
+
+    /* Apply blur effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Keep 100% blur for first 50px, then fade to 0% */
+    mask-image: linear-gradient(to top, 
+        rgba(0, 0, 0, 1) 0px,    /* Full blur starts at the bottom */
+        rgba(0, 0, 0, 1) 15px,
+        rgba(0, 0, 0, 0.5) 50px,
+        rgba(0, 0, 0, 0.3) 100px,
+        rgba(0, 0, 0, 0) 150px);
+    -webkit-mask-image: linear-gradient(to top, 
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 1) 15px,
+        rgba(0, 0, 0, 0.5) 50px,
+        rgba(0, 0, 0, 0.3) 100px,  
+        rgba(0, 0, 0, 0) 150px
+    );
+
+    pointer-events: none; /* Prevents it from blocking clicks */
+    z-index: 9999; /* Ensures it stays on top */
 }
+

@@ -8,6 +8,7 @@
     left: 0;
     filter: blur(120px);
     z-index: -98;
+    opacity: 0.5;
 }
 
 .cursor{

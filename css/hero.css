@@ -34,3 +34,19 @@
     font-size: 10px;
     font-family: "Lexend Giga";
 }
+
+.bgimg{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: -95;
+    mix-blend-mode:color-dodge;
+    object-fit: cover;
+}
+.HbgImg{
+    height: 100vh;
+    /* opacity: 0.3; */
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(-100px);
+}

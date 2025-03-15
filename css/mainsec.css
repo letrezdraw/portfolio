@@ -130,7 +130,7 @@
 }
 .h1lg{
     position: relative;
-    left: 30px;
+    left: 10%;
     top: -2px;
     color: var(--shadow-low);
 }
@@ -242,6 +242,15 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+.abt{
+    position: absolute;
+    top: 15%;
+}
+.about-me-content{
+    position: absolute;
+    padding-right: 7%;
+    line-height: 35px;
 }
 
 .showcase::-webkit-scrollbar {

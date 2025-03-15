@@ -17,6 +17,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+    <div class="bottomBlur"></div>
+    <div class="bgimg">
+    <img src="https://cdnb.artstation.com/p/users/covers/008/277/239/default/bf2833fb732a7044d05b14e2a14d5156.jpg" alt="Hero_BG_img" class="HbgImg">
+    </div>
     <div class="cursor">
         <div class="cir"></div>
     </div>
@@ -25,18 +29,18 @@
         <div class="b2"></div>
         <div class="b3"></div>
     </div>
-    <section class="navbar hidden" >
+    <section class="navbar" >
         <div class="bg">
             <div class="logo_nav">
-                <img src="img/Logo-Trans.png" alt="Logo" class="Nlogo">
+                <img src="img/Logo-Trans.png" alt="Logo" class="Nlogo hidden">
             </div>
-            <div class="menu">
-                <a href="#containt" class="js-trigger-transition nav-link">Portfolio</a>
+            <div class="menu hidden">
+                <a href="#Portfolio" class="js-trigger-transition nav-link">Portfolio</a>
                 <a href="#About" class="js-trigger-transition nav-link">About</a>
             </div>
         </div>
     </section>
-        
+
     <section class="hero nav-link" id="home">
         <div class="parallax hidden">
             <img src="img/Logo-Trans.png" alt="Hero Image" class="hero-image">
@@ -46,7 +50,7 @@
         </div>
     </section>
     
-    <section class="main-section hidden nav-link" id="containt">
+    <section class="main-section hidden nav-link" id="Portfolio">
         <!-- Left Navbar -->
         <div class="side-nav hidden">
             <div class="side-nav-content hidden">
@@ -238,13 +242,26 @@
                     </div>
                 </div>
             </section>
+            <section class="project">
+                <div class="container">
+
+                </div>
+            </section>
         </div>
 
         <!-- Right About Me Section -->
         <div class="about-me hidden">
-            <h2 class="hidden">About Me</h2>
+            <div class="abt">
+                <h2 class="hidden">About Me</h2>
+            </div>
+            <div class="about-me-content">
+                <p class="pab">
+                    I'm a <b>Digital Artist & Developer</b> who loves blending art and technology to create stunning visuals and interactive experiences. Skilled in C, C++, JavaScript, Python, and tools like Photoshop, Blender, and After Effects, I build websites, digital art, and immersive designs.
+                </p>
+            </div>
         </div>
     </section>
+    <script type="module" src="js/main.js"></script>
     <script type="module" src="js/mouse.js"></script>
     <script type="module" src="js/fadein.js"></script>
     <script type="module" src="js/scrollbar.js"></script>
