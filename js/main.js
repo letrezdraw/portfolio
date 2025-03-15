@@ -17,15 +17,36 @@ document.addEventListener("mousemove", (event) => {
     bgImg.style.transition = "transform 0.2s ease-out"; // Smooth movement
 });
 
-gsap.to(".bottomBlur", {
-    backdropFilter: "blur(40px)", // Strong blur at bottom
-    webkitBackdropFilter: "blur(40px)",
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: "body",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true // Smoothly updates based on scroll
+document.addEventListener("DOMContentLoaded", function () {
+    let scrollY = window.scrollY;
+    let isScrolling = false;
+
+    function smoothScroll(targetY) {
+        isScrolling = true;
+        let startY = window.scrollY;
+        let startTime = performance.now();
+
+        function animationStep(time) {
+            let progress = Math.min((time - startTime) / 500, 1); // 500ms duration
+            let ease = progress * (2 - progress); // Smooth easing function
+            window.scrollTo(0, startY + (targetY - startY) * ease);
+
+            if (progress < 1) {
+                requestAnimationFrame(animationStep);
+            } else {
+                isScrolling = false;
+            }
+        }
+
+        requestAnimationFrame(animationStep);
     }
+
+    document.addEventListener("wheel", (event) => {
+        if (isScrolling) return;
+        event.preventDefault();
+
+        let scrollAmount = window.innerHeight * 0.9; // Scroll almost 1 section
+        scrollY += event.deltaY > 0 ? scrollAmount : -scrollAmount;
+        smoothScroll(scrollY);
+    });
 });
