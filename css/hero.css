@@ -76,4 +76,11 @@
         height: 60%;
         mix-blend-mode:hue;
     }
+    .hero-content{
+        position: absolute;
+        bottom: 50px;
+        font-weight: 100;
+        font-size: 10px;
+        font-family: "Lexend Giga";
+    }
 }
