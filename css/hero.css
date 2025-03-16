@@ -41,14 +41,13 @@
     justify-content: center;
     z-index: -95;
     mix-blend-mode:color-dodge;
-    object-fit: cover;
 }
 .HbgImg{
-    height: 100vh;
+    top: -20px;
+    height: 110vh;
     /* opacity: 0.3; */
-    object-fit: cover;
     position: absolute;
-    transform: translateX(-100px);
+    transform: translateX(-150px);
 }
 
 

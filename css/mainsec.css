@@ -228,9 +228,23 @@
     font-size: large;
 }
 
+.dp{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.Project-Title{
+    position: absolute;
+    font-size: 50px;
+}
+
 .project{
     position: relative;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     display: flex;
     border: 1px solid var(--border-c);
@@ -238,8 +252,10 @@
 }
 
 .project-contain{
+    margin-top: 100px;
     display: flex;
-    height: 50%;
+    flex-direction: column;
+    height: 90%;
     width: 100%;
     position: relative;
     align-items: center;
@@ -247,19 +263,28 @@
 
 .Prowtwo{
     display: flex;
-    position: absolute;
+    position: relative;
     height: 90%;
     width: 100%;
     align-items: center;
     justify-content: center;
-
 }
 .pbox{
     position: absolute;
     display: flex;
     height: 80%;
     width: 40%;
-    transition: all 0.2s ease-out;
+}
+.pbox {
+    perspective: 1000px; /* Adds depth effect */
+}
+
+.pbox:hover .ptitle-box {
+    transform: translateZ(50px); /* Moves title slightly toward the screen */
+}
+.ptitle-box {
+    transition: transform 0.3s ease;
+    transform: translateZ(0); /* Default position */
 }
 
 .leftp{
@@ -293,9 +318,19 @@
 
 .pimg{
     position: absolute;
+    width: 120%;
     height: 120%;
+    object-fit: cover;
 }
 
+.prowone{
+    display: flex;
+    position: relative;
+    height: 90%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
@@ -427,6 +462,6 @@
         transform: translateY(140px);
     }
     .Mbottom{
-        font-size: 13px;
+        font-size: 10px;
     }
 }
