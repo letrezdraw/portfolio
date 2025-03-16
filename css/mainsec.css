@@ -337,8 +337,12 @@
     .linksT{
         gap: 15px;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        right: 10px;
+        transform: translateY(140px);
+    }
+    .Mbottom{
+        font-size: 15px;
     }
 }
