@@ -1,3 +1,12 @@
+*{
+    --bg:black;
+    --text:white;
+    --border-c:rgb(104, 3, 42);
+    --accent:rgb(255, 0, 98);
+    --shadow-low:rgba(255, 0, 98, 0.466);
+    --shadow-high:rgba(255, 255, 255, 0.24);
+}
+
 .main-section {
     display: flex;
     height: 100vh;
@@ -244,7 +253,7 @@
 
 .project{
     position: relative;
-    height: 200vh;
+    height: 500vh;
     width: 100%;
     display: flex;
     border: 1px solid var(--border-c);
@@ -272,8 +281,8 @@
 .pbox{
     position: absolute;
     display: flex;
-    height: 80%;
-    width: 40%;
+    height: 180px;
+    width: 300px;
 }
 .pbox {
     perspective: 1000px; /* Adds depth effect */
@@ -281,11 +290,19 @@
 
 .pbox:hover .ptitle-box {
     transform: translateZ(50px); /* Moves title slightly toward the screen */
+    color: var(--accent);
 }
 .ptitle-box {
     transition: transform 0.3s ease;
     transform: translateZ(0); /* Default position */
+    color: var(--accent);
 }
+.ptitle a{
+    color: var(--text);
+}
+.pbox:hover a{
+    color: var(--accent);
+} 
 
 .leftp{
     left: 6%;

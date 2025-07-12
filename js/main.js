@@ -3,7 +3,7 @@ document.addEventListener("mousemove", (event) => {
     if (!bgImg) return;
 
     // Get the initial transform position from CSS
-    const initialX = -150; // The value from transform: translateX(-100px);
+    const initialX = -10; // The value from transform: translateX(-100px);
 
     // Get window size
     const { innerWidth: width, innerHeight: height } = window;
