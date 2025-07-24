@@ -2,8 +2,88 @@
 <html>
 <head>
     <title>About</title>
+    <link rel="stylesheet" href="css/mouse.css">
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel="stylesheet" href="css/fadein.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/Am.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
 </head>
 <body>
-    <h1>About Us</h1>
+    <div class="bgg">
+        <div class="bgimg">
+            <img src="https://cdna.artstation.com/p/assets/images/images/089/058/898/large/letrezdraw-y9-f.jpg?" alt="Hero_BG_img" class="HbgImg">
+        </div>
+    </div>
+    <div class="cursor">
+        <div class="cir">
+
+        </div>
+    </div>
+    <div class="lhome">
+      <a href="https://letrezdraw.github.io/portfolio/">Home</a>
+    </div>
+    <div class="pbox bbox hidden">
+        <div class="frame pimg-box">
+            <img src="https://cdnb.artstation.com/p/users/avatars/008/277/239/large/1441bb45a32dd38074282e37b3162599.jpg?" alt="Pfp-image" class="pfp pimg">
+        </div>
+        <div class="name pimg-box hidden">
+          <h1 class="n1 pimg scramble-text">L E T R E Z D R A W</h1>  
+        </div>
+    </div>
+    <div class="dis hidden">
+      <p class="pd">
+        Hello! I'm Letrezdraw, a multidisciplinary creator specializing in 3D art, digital art, and concept design.<br>
+        My passion lies in crafting immersive digital experiences that blend creativity with technology.<br> 
+        Alongside my artistic pursuits, 
+        I am also a software and game developer, bringing interactive worlds and ideas to life through code.<br> 
+        With intermediate programming skills and experience in various tools and techniques, 
+        I enjoy exploring the intersection of art and development, 
+        constantly learning and pushing the boundaries of what's possible in both field
+      </p>
+    </div>
+
+
+
+
+
+    
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/mouse.js"></script>
+    <script type="module" src="js/fadein.js"></script>
+    <script type="module" src="js/scrollbar.js"></script>
+    <script>
+        function disableScroll() {
+    window.addEventListener('scroll', preventScroll, { passive: false });
+    window.addEventListener('wheel', preventScroll, { passive: false });
+    window.addEventListener('touchmove', preventScroll, { passive: false });
+    window.addEventListener('keydown', preventKeys, false);
+  }
+
+  function enableScroll() {
+    window.removeEventListener('scroll', preventScroll);
+    window.removeEventListener('wheel', preventScroll);
+    window.removeEventListener('touchmove', preventScroll);
+    window.removeEventListener('keydown', preventKeys);
+  }
+
+  function preventScroll(e) {
+    e.preventDefault();
+  }
+
+  function preventKeys(e) {
+    // Prevent arrow keys, space, page up/down
+    const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
+    if (keys.includes(e.keyCode)) {
+      e.preventDefault();
+    }
+  }
+
+  // Call disableScroll() to disable, and enableScroll() to re-enable
+  disableScroll();
+    </script>
 </body>
 </html>
